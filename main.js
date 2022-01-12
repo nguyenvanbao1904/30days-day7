@@ -6,9 +6,8 @@ var tags = ['nodejs','reactjs']
 function createTag(){
     ul.innerHTML=''
     tags.forEach(function(tag,index){
-        var liTag = '<li>'
-        +tag+'<i class="fas fa-times" onclick = "removeTag(this,'+index+')</i>'+
-        '</li>'
+        var liTag = `<li> ${tag} <i class="fas fa-times" onclick="removeTag(this,${index})"></i></li>`
+        console.log(liTag)
         ul.innerHTML+=liTag
     })
     ul.appendChild(input)
